@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* || COLORS VARIATIONS */
+    --1ANTITET-COLOR-STRONGER: #d07200;
+    --2ANTITET-COLOR-STRONGER: #98008e;
+
+    /* || TETRADIC COLORS */
+    --1TET-COLOR: #ff8e00;
+    --1ANTITET-COLOR: #0071ff;
+    --2TET-COLOR: #ff00f0;
+    --2ANTITET-COLOR: #00ff0f;
+
+    /* || COLORS */
+    --HEADER-COLOR: white;
+    --HEADER-NAV-COLOR: whitesmoke;
+    --FOOTER-BGCOLOR: #3e91f6;
+
+    /* || FONTS */
+    --FF: "Inter", sans-serif;
+    --FS: clamp(16px, 2vw, 24px);
+    --FIGDESCRIPTION-FS: 2.5rem;
+
+    /* || MARGINS */
+
+    /* || SIZES */
+}
+
+/* || Utility Classes */
+
+.notext-decoration {
+    text-decoration: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+}
+/* || General Classes */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    font-family: "Nunito", sans-serif;
+    /* background-color: wheat; */
+    background-color: whitesmoke;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    color: var(--HEADER-COLOR);
+    background-image: linear-gradient(
+        to top,
+        var(--1ANTITET-COLOR-STRONGER),
+        #812473
+    );
+    display: flex;
+    flex-flow: column;
+}
+
+.mini-menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.header__nav ul {
+    margin-top: 3.5%;
+    width: 500px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    /* gap: 40px; */
+}
+
+.header__nav ul li {
+    font-weight: bold;
+    list-style-type: none;
+    /* margin: ;
+	display: block; */
+}
+
+.header__nav ul li a:any-link {
+    text-decoration: none;
+    color: var(--HEADER-COLOR);
+}
+
+.slider-wrapper {
+    margin: 25px 0;
+    width: 1000px;
+    height: 465px;
+    /* background-color: aliceblue; */
+    /* background image */
+    /* background-color: wheat; */
+    background-color: rgb(230, 227, 221);
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column;
+}
+
+.container-slide {
+    /* width: calc(700px + 6*1.6rem); */
+    width: 1000px;
+    height: 431px;
+    gap: 200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__figure {
+    display: flex;
+    flex-direction: row;
+}
+
+.header__figure figcaption {
+    /* width: 6rem; */
+    color: #333;
+    margin-top: 150px;
+    font-size: var(--FIGDESCRIPTION-FS);
+}
+
+.header__figure img {
+    /* margin-bottom: 20px; */ /* mesmo tamanho do contorno branco */
+    width: 700px;
+    height: 430px;
+}
+
+.header-slider {
+    width: 170px;
+    height: 25px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* background-color: hsla(0, 0%, 27%, 0.2);
+	border-radius: 20px; */
+}
+
+.header-slider a {
+    margin-top: 6.25px;
+    width: 15px;
+    height: 15px;
+    background-color: hsla(0, 0%, 27%, 0.2);
+    border-radius: 400px;
+}
+
+.header-slider a:hover {
+    background-color: hsla(0, 0%, 27%, 0.5);
+}
+
+.slider-animation {
+    animation-name: slide;
+    animation-duration: 10s; /* 8s */
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-direction: none;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    15% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-125%);
+    }
+    40% {
+        transform: translateX(-125%);
+    }
+    55% {
+        transform: translateX(-250%);
+    }
+    65% {
+        transform: translateX(-250%);
+        /* background-color: rebeccapurple; */
+    }
+    
+}
+
+.main {
+    margin: 3vh 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.main h1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 3.5rem;
+    color: var(--1ANTITET-COLOR);
+}
+
+.main h2 {
+    width: 100%;
+    margin-bottom: 7vh;
+    font-size: 3rem;
+    color: var(--1ANTITET-COLOR-STRONGER);
+    background-color: wheat;
+    font-weight: 100;
+    border-radius: 20px;
+    padding: 1%;
+    /* text-shadow: 1px -1px rgb(48, 46, 37);; */
+}
+
+.main h3 {
+    font-size: 1.5rem;
+}
+
+.main .container-historia {
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.giovanni-crianca {
+    width: 100%;
+    height: 600px;
+}
+
+.main figcaption {
+    margin-bottom: 4vh;
+}
+
+.container-candidatura {
+    display: flex;
+    flex-flow: row;
+    font-size: 1.5rem;
+    /* font-weight: ; */
+}
+
+.container-candidatura img {
+    /* background-color: #333; */
+}
+
+.container-candidatura ul {
+    margin-top: 12.5vh;
+    /*   transform: translateX(-30px); */
+}
+
+.container-candidatura ul li {
+    margin-top: 2vh;
+}
+
+.circle {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main .container-expectativas {
+    font-size: 1.5rem;
+    margin-left: 10%;
+    margin-bottom: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main .container-expectativas ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.footer {
+    background-color: var(--FOOTER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    font-size: 3rem;
+    text-align: center;
+}
